@@ -2,9 +2,79 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Каталог гостиниц городка Седона</title>
 </head>
 <body>
+  <header class="page__header header">
+    <nav class="header__nav nav">
+      <a class="nav__logo-link" href="index.html">
+        <img class="nav__logo-img" src="#" alt="Логотип города Седона" width="" height="">
+      </a>
+      <ul class="nav__menu menu">
+        <li class="menu__item">
+          <a class="menu__link" href="index.html">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu-link" href="#">О Седоне</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--current" href="#">Гостиницы</a>
+        </li>
+      </ul>
+      <ul class="nav__user-menu user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">Поиск</a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#">Закладки</a>
+        </li>
+        <li class="user-menu__item">
+          <a class="btn user-menu__btn" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page__main-inner main-inner">
+    <div class="wrapper">
+      <h1 class="main-inner__title">Гостиницы Седоны</h1>
+      <ul class="main-inner__breadcrumbs breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link breadcrumbs__link--curent">Гостиницы</a>
+        </li>
+      </ul>
+      <section class="main-inner__filter filter">
+        <form class="filter__form filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="filter-form__services services">
+            <legend class="services__title">Инфраструктура:</legend>
+            <label><input class="services__item" type="checkbox" name="services-item-pool" checked>Бассейн</label>
+            <label><input class="services__item" type="checkbox" name="services-item-parking" checked>Парковка</label>
+            <label><input class="services__item" type="checkbox" name="services-item-wifi">Wi-Fi</label>
+          </fieldset>
+          <fieldset class="filter-form__house-type house-type">
+            <legend class="house-type__title">Тип жилья:</legend>
+            <label><input class="house-type__item" type="radio" name="house-type-radio" value="Гостиница" checked>Гостиница</label>
+            <label><input class="house-type__item" type="radio" name="house-type-radio" value="Мотель">Мотель</label>
+            <label><input class="house-type__item" type="radio" name="house-type-radio" value="Апартаменты">Апартаменты</label>
+          </fieldset>
+          <fieldset class="filter-form__price-range price-range">
+            <legend class="price-range__title">Стоимость, ₽:</legend>
+            <label><input class="price-range__min" type="text" name="price-range-min" value="0">от</label>
+            <label><input class="price-range__max" type="text" name="price-range-max" value="9000">до</label>
+            <!-- здесь будет реализация ползунков -->
+          </fieldset>
+          <fieldset class="filter-form__actions actions">
+            <legend class="actions__title visually-hidden">Кнопки управления</legend>
+            <button class="btn actions__btn-submit" type="submit">Применить</button>
+            <button class="btn actions__btn-reset" type="reset">Сбросить</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
 
+
+  </main>
 </body>
 </html>
