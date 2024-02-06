@@ -2,7 +2,7 @@
 
 * Студент: [Валерий Васен](https://up.htmlacademy.ru/htmlcss/39/user/367467).
 * Наставник: [Кексобот](https://giter.club/keksobot).
-* Ссылка на сайт: (https://vasen.github.io/367467-sedona-39/).
+* Ссылка на сайт: [Сайт](https://vasen.github.io/367467-sedona-39/).
 
 ---
 
