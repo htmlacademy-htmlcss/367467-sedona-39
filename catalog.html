@@ -5,7 +5,7 @@
   <title>Каталог гостиниц городка Седона</title>
 </head>
 <body class="page">
-  <header class="page__header header">
+  <header class="page__header header" data-test="header">
     <nav class="header__nav nav">
       <a class="nav__logo-link" href="index.html">
         <img class="nav__logo-img" src="#" alt="Логотип города Седона" width="" height="">
@@ -45,7 +45,7 @@
           <a class="breadcrumbs__link breadcrumbs__link--curent">Гостиницы</a>
         </li>
       </ul>
-      <section class="main-inner__search-hotel search-hotel">
+      <section class="main-inner__search-hotel search-hotel" data-test="filter">
         <h2 class="visually-hidden">Фильтр поиска гостиниц в городке Седона</h2>
         <form class="search-hotel__form search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="search-hotel-form__services services">
@@ -74,7 +74,7 @@
         </form>
       </section>
     </div>
-    <section class="main-inner__catalog catalog">
+    <section class="main-inner__catalog catalog" data-test="catalog">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <p><b class="catalog__search-result">Найдено гостиниц: 38</b></p>
       <div class="catalog__sort sort" aria-label="Сортировка">
@@ -215,8 +215,8 @@
       </ul>
     </section>
   </main>
-  <footer class="page__footer footer">
-    <section class="footer__subsribe subsribe">
+  <footer class="page__footer footer" data-test="footer">
+    <section class="footer__subsribe subsribe" data-test="subsribe">
       <h2 class="visually-hidden">Подписка на новости Седоны</h2>
       <div class="subsribe__caption caption">
         <p><b class="caption__title">Подпишитесь на рассылку</b></p>
