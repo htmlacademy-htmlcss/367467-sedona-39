@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог гостиниц городка Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="page">
   <header class="page__header header" data-test="header">
     <nav class="header__nav nav">
-      <a class="nav__logo-link">
-        <img class="nav__logo-img" src="images/svg/logo.svg" alt="Логотип города Седона" width="140" height="70">
+      <a class="nav__logo-link" href="index.html">
+        <img class="nav__logo-img" src="images/logo.svg" alt="Логотип города Седона" width="140" height="70">
       </a>
       <ul class="nav__menu menu">
         <li class="menu__item">
-          <a class="menu__link menu__link--current">Главная</a>
+          <a class="menu__link" href="index.html">Главная</a>
         </li>
         <li class="menu__item">
-          <a class="menu-link" href="#">О Седоне</a>
+          <a class="menu__link" href="#">О Седоне</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Гостиницы</a>
+        <li class="menu__item menu__link--current">
+          <a class="menu__link">Гостиницы</a>
         </li>
       </ul>
       <ul class="nav__user-menu user-menu">
@@ -214,9 +215,9 @@
         </li>
       </ul>
     </section>
-    <section class="footer__subsribe subsribe" data-test="subsribe">
+    <section class="subscribe" data-test="subscribe">
       <h2 class="visually-hidden">Подписка на новости Седоны</h2>
-      <div class="subsribe__caption caption">
+      <div class="subscribe__caption caption">
         <p><b class="caption__title">Подпишитесь на рассылку</b></p>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       </div>
@@ -250,7 +251,7 @@
       <div class="contacts__copyright copyright">
         <h3 class="visually-hidden">Наш разработчик</h3>
         <a class="copyright__link" href="https://htmlacademy.ru/">
-          <img class="copyright__img" src="images/svg/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="33">
+          <img class="copyright__img" src="images/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="33">
         </a>
       </div>
     </section>

@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Сайт городка Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page">
     <header class="page__header header" data-test="header">
       <nav class="header__nav nav">
         <a class="nav__logo-link">
-          <img class="nav__logo-img" src="images/svg/logo.svg" alt="Логотип города Седона" width="140" height="70">
+          <img class="nav__logo-img" src="images/logo.svg" alt="Логотип города Седона" width="140" height="70">
         </a>
         <ul class="nav__menu menu">
           <li class="menu__item">
             <a class="menu__link menu__link--current">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="menu-link" href="#">О Седоне</a>
+            <a class="menu__link" href="#">О Седоне</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">Гостиницы</a>
@@ -37,7 +38,7 @@
     <main class="page__main-index main-index" data-test="main">
       <section class="main-index__hero hero" data-test="hero">
         <h1 class="visually-hidden">Главная страница сайта городка Седона</h1>
-        <img class="hero__slogan" src="images/svg/hero-title.svg" alt="Добро пожаловать в великолепную Седону! Потому что Гранд Каньон отстой!" width="458" height="352">
+        <img class="hero__slogan" src="images/hero-title.svg" alt="Добро пожаловать в великолепную Седону! Потому что Гранд Каньон отстой!" width="458" height="352">
       </section>
       <section class="main-index__advantages advantages" data-test="advantages">
         <h2 class="visually-hidden">Особенности города Седона</h2>
@@ -46,7 +47,7 @@
           <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--first advantage">
+          <li class="advantages__item advantage">
             <h3 class="advantage__title title">Настоящий городок</h3>
             <p class="advantage__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             <img class="advantage__img" src="images/advantages-image-1.jpg" alt="Вид на улицу седоны из окна гостиницы" width="800" height="385">
@@ -63,7 +64,7 @@
             <h3 class="advantage__title title">Мало туристов</h3>
             <p class="advantage__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li class="advantages__item advantages__item--last advantage">
+          <li class="advantages__item advantage">
             <h3 class="advantage__title title">Там есть мост дьявола</h3>
             <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             <img class="advantage__img" src="images/advantages-image-2.jpg" alt="Вид на главную достопримечательность Седоны - Мост Дьявола" width="800" height="385">
@@ -99,15 +100,15 @@
         </div>
         <a class="btn search__btn" href="#">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="footer__subsribe subsribe" data-test="subsribe">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="visually-hidden">Подписка на новости Седоны</h2>
-        <div class="subsribe__caption caption">
+        <div class="subscribe__caption caption">
           <p><b class="caption__title">Подпишитесь на рассылку</b></p>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         </div>
-        <form class="subsribe__form subsribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subsribe-form__email" type="email" name="subsribe-form__email" placeholder="Ваш e-mail">
-          <button class="btn subsribe-form__btn" type="submit">Подписаться</button>
+        <form class="subscribe__form subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="subscribe-form__email" type="email" name="subscribe-form__email" placeholder="Ваш e-mail">
+          <button class="btn subscribe-form__btn" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -135,7 +136,7 @@
         <div class="contacts__copyright copyright">
           <h3 class="visually-hidden">Наш разработчик</h3>
           <a class="copyright__link" href="https://htmlacademy.ru/">
-            <img class="copyright__img" src="images/svg/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="33">
+            <img class="copyright__img" src="images/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="33">
           </a>
         </div>
       </section>
