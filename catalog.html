@@ -50,25 +50,27 @@
         <h2 class="visually-hidden">Фильтр поиска гостиниц в городке Седона</h2>
         <form class="search-hotel__form search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="search-hotel-form__services services">
-            <legend class="services__title">Инфраструктура:</legend>
+            <legend class="services__title legend-title">Инфраструктура:</legend>
             <label><input class="services__item" type="checkbox" name="services-item-pool" checked>Бассейн</label>
             <label><input class="services__item" type="checkbox" name="services-item-parking" checked>Парковка</label>
             <label><input class="services__item" type="checkbox" name="services-item-wifi">Wi-Fi</label>
           </fieldset>
           <fieldset class="search-hotel-form__house-type house-type">
-            <legend class="house-type__title">Тип жилья:</legend>
+            <legend class="house-type__title legend-title">Тип жилья:</legend>
             <label><input class="house-type__item" type="radio" name="house-type-radio" value="Гостиница" checked>Гостиница</label>
             <label><input class="house-type__item" type="radio" name="house-type-radio" value="Мотель">Мотель</label>
             <label><input class="house-type__item" type="radio" name="house-type-radio" value="Апартаменты">Апартаменты</label>
           </fieldset>
           <fieldset class="search-hotel-form__price-range price-range">
-            <legend class="price-range__title">Стоимость, ₽:</legend>
-            <label><input class="price-range__min" type="text" name="price-range-min" value="0">от</label>
-            <label><input class="price-range__max" type="text" name="price-range-max" value="9000">до</label>
+            <legend class="price-range__title legend-title">Стоимость, ₽:</legend>
+            <label for="price-range__min">от</label>
+            <input class="price-range__min" id="price-range__min" type="text" name="price-range-min" value="0">
+            <label for="price-range__max">до</label>
+            <input class="price-range__max" id="price-range__max" type="text" name="price-range-max" value="9000">
             <!-- здесь будет реализация ползунков -->
           </fieldset>
           <fieldset class="search-hotel-form__actions actions">
-            <legend class="actions__title visually-hidden">Кнопки управления</legend>
+            <legend class="actions__title legend-title visually-hidden">Кнопки управления</legend>
             <button class="btn actions__btn-submit" type="submit">Применить</button>
             <button class="btn actions__btn-reset" type="reset">Сбросить</button>
           </fieldset>
@@ -215,15 +217,15 @@
         </li>
       </ul>
     </section>
-    <section class="subscribe" data-test="subscribe">
+    <section class="subscribe subscribe-inner" data-test="subscribe">
       <h2 class="visually-hidden">Подписка на новости Седоны</h2>
       <div class="subscribe__caption caption">
         <p><b class="caption__title">Подпишитесь на рассылку</b></p>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       </div>
-      <form class="subsribe__form subsribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <input class="subsribe-form__email" type="email" name="subsribe-form__email" placeholder="Ваш e-mail">
-        <button class="btn subsribe-form__btn" type="submit">Подписаться</button>
+      <form class="subscribe__form subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <input class="subscribe-form__email" type="email" name="subscribe-form__email" placeholder="Ваш e-mail">
+        <button class="btn subscribe-form__btn" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
