@@ -39,11 +39,11 @@
       </nav>
     </header>
     <main class="page__main-inner main-inner main">
-      <div class="wrapper">
+      <div class="main-inner__filter-wrapper filter-wrapper">
         <h1 class="main-inner__title">Гостиницы Седоны</h1>
         <ul class="main-inner__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <a class="breadcrumbs__link breadcrumbs__link--main" href="index.html"><span class="visually-hidden">Главная</span></a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link breadcrumbs__link--curent">Гостиницы</a>
@@ -52,27 +52,30 @@
         <section class="main-inner__search-hotel search-hotel" data-test="filter">
           <h2 class="visually-hidden">Фильтр поиска гостиниц в городке Седона</h2>
           <form class="search-hotel__form search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="search-hotel-form__services services">
+            <fieldset class="search-hotel-form__services field-set services">
               <legend class="services__title legend-title">Инфраструктура:</legend>
               <label><input class="services__item" type="checkbox" name="services-item-pool" checked>Бассейн</label>
               <label><input class="services__item" type="checkbox" name="services-item-parking" checked>Парковка</label>
               <label><input class="services__item" type="checkbox" name="services-item-wifi">Wi-Fi</label>
             </fieldset>
-            <fieldset class="search-hotel-form__house-type house-type">
+            <fieldset class="search-hotel-form__house-type field-set house-type">
               <legend class="house-type__title legend-title">Тип жилья:</legend>
               <label><input class="house-type__item" type="radio" name="house-type-radio" value="Гостиница" checked>Гостиница</label>
               <label><input class="house-type__item" type="radio" name="house-type-radio" value="Мотель">Мотель</label>
               <label><input class="house-type__item" type="radio" name="house-type-radio" value="Апартаменты">Апартаменты</label>
             </fieldset>
-            <fieldset class="search-hotel-form__price-range price-range">
+            <fieldset class="search-hotel-form__price-range field-set price-range">
               <legend class="price-range__title legend-title">Стоимость, ₽:</legend>
-              <label for="price-range__min">от</label>
-              <input class="price-range__min" id="price-range__min" type="text" name="price-range-min" value="0">
-              <label for="price-range__max">до</label>
-              <input class="price-range__max" id="price-range__max" type="text" name="price-range-max" value="9000">
+              <label for="price-range__min">
+                <input class="price-range__min" id="price-range__min" type="text" name="price-range-min" value="0"><span>от</span>
+              </label>
+              <label for="price-range__max">
+                <input class="price-range__max" id="price-range__max" type="text" name="price-range-max" value="9000">
+              <span>до</span>
+              </label>
               <!-- здесь будет реализация ползунков -->
             </fieldset>
-            <fieldset class="search-hotel-form__actions actions">
+            <fieldset class="search-hotel-form__actions field-set actions">
               <legend class="actions__title legend-title visually-hidden">Кнопки управления</legend>
               <button class="btn actions__btn-submit" type="submit">Применить</button>
               <button class="btn actions__btn-reset" type="reset">Сбросить</button>
@@ -82,46 +85,42 @@
       </div>
       <section class="main-inner__catalog catalog" data-test="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p><b class="catalog__search-result">Найдено гостиниц: 38</b></p>
-        <div class="catalog__sort sort" aria-label="Сортировка">
-          <select class="sort__select-control">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
-          </select>
-          <ul class="sort__types sort-types">
-            <li class="sort-types__item">
-              <a class="sort-types__btn sort-types__btn--cards" href="#">Показать карточки</a>
-            </li>
-            <li class="sort-types__item">
-              <a class="sort-types__btn sort-types__btn--gallery" href="#">Показать галерею</a>
-            </li>
-            <li class="sort-types__item">
-              <a class="sort-types__btn sort-types__btn--list" href="#">Показать спискок</a>
-            </li>
-          </ul>
+        <div class="catalog__sort-wrapper">
+          <p class="catalog__search-result"><b>Найдено гостиниц: 38</b></p>
+          <div class="catalog__sort sort" aria-label="Сортировка">
+            <select class="sort__select-control">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+            <ul class="sort__types sort-types">
+              <li class="sort-types__item">
+                <a class="sort-types__btn sort-types__btn--cards" href="#"><span class="visually-hidden">Показать карточки</span></a>
+              </li>
+              <li class="sort-types__item">
+                <a class="sort-types__btn sort-types__btn--gallery" href="#"><span class="visually-hidden">Показать галерею</span></a>
+              </li>
+              <li class="sort-types__item">
+                <a class="sort-types__btn sort-types__btn--list" href="#"><span class="visually-hidden">Показать спискок</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
         <ul class="catalog__hotel-list hotel-list">
           <li class="hotel-list__hotel-card hotel-card">
             <h3 class="hotel-card__title">Amara Resort & Spa</h3>
             <img class="hotel-card__img" src="images/catalog/catalog-image-1.jpg" alt="" width="300" height="212">
-            <div class="hotel-card__info hotel-info">
-              <p>
+            <div class="hotel-card__info">
+              <p class="hotel-info">
                 <span class="hotel-info__type">Гостиница</span>
                 <span class="hotel-info__min-price">От 4000 ₽</span>
               </p>
-              <p>
+              <p class="hotel-card__buttons">
                 <a class="btn hotel-info__more-info-btn" href="#">Подробнее</a>
                 <button class="btn hotel-info__favorite-btn">В избранное</button>
               </p>
-              <div>
-                <ol class="hotel-info__stars hotel-stars">
-                  <li class="hotel-stars__item hotel-stars__item--checked">Одна звезда</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Две звезды</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Три звезды</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Четыре звезды</li>
-                  <li class="hotel-stars__item">Пять звезд</li>
-                </ol>
+              <div class="hotel-card__stars">
+                <p class="hotel-stars__item hotel-stars__item--four-star"><span class="visually-hidden">Четыре звезды</span></p>
                 <span class="hotel-info__rating">Рейтинг: 8,5</span>
               </div>
             </div>
@@ -129,23 +128,17 @@
           <li class="hotel-list__hotel-card hotel-card">
             <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
             <img class="hotel-card__img" src="images/catalog/catalog-image-2.jpg" alt="" width="300" height="212">
-            <div class="hotel-card__info hotel-info">
-              <p>
+            <div class="hotel-card__info">
+              <p class="hotel-info">
                 <span class="hotel-info__type">Гостиница</span>
                 <span class="hotel-info__min-price">От 5000 ₽</span>
               </p>
-              <p>
+              <p class="hotel-card__buttons">
                 <a class="btn hotel-info__more-info-btn" href="#">Подробнее</a>
-                <button class="btn hotel-info__favorite-btn hotel-info__favorite-btn--checked">В избранном</button>
+                <button class="btn hotel-info__favorite-btn">В избранное</button>
               </p>
-              <div>
-                <ol class="hotel-info__stars hotel-stars">
-                  <li class="hotel-stars__item hotel-stars__item--checked">Одна звезда</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Две звезды</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Три звезды</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Четыре звезды</li>
-                  <li class="hotel-stars__item">Пять звезд</li>
-                </ol>
+              <div class="hotel-card__stars">
+                <p class="hotel-stars__item hotel-stars__item--four-star"><span class="visually-hidden">Четыре звезды</span></p>
                 <span class="hotel-info__rating">Рейтинг: 9,2</span>
               </div>
             </div>
@@ -153,23 +146,17 @@
           <li class="hotel-list__hotel-card hotel-card">
             <h3 class="hotel-card__title">Desert Quail Inn</h3>
             <img class="hotel-card__img" src="images/catalog/catalog-image-3.jpg" alt="" width="300" height="212">
-            <div class="hotel-card__info hotel-info">
-              <p>
+            <div class="hotel-card__info">
+              <p class="hotel-info">
                 <span class="hotel-info__type">Гостиница</span>
                 <span class="hotel-info__min-price">От 2500 ₽</span>
               </p>
-              <p>
+              <p class="hotel-card__buttons">
                 <a class="btn hotel-info__more-info-btn" href="#">Подробнее</a>
                 <button class="btn hotel-info__favorite-btn">В избранное</button>
               </p>
-              <div>
-                <ol class="hotel-info__stars hotel-stars">
-                  <li class="hotel-stars__item hotel-stars__item--checked">Одна звезда</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Две звезды</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Три звезды</li>
-                  <li class="hotel-stars__item">Четыре звезды</li>
-                  <li class="hotel-stars__item">Пять звезд</li>
-                </ol>
+              <div class="hotel-card__stars">
+                <p class="hotel-stars__item hotel-stars__item--three-star"><span class="visually-hidden">Четыре звезды</span></p>
                 <span class="hotel-info__rating">Рейтинг: 6,9</span>
               </div>
             </div>
@@ -177,28 +164,23 @@
           <li class="hotel-list__hotel-card hotel-card">
             <h3 class="hotel-card__title">GreenTree Inn</h3>
             <img class="hotel-card__img" src="images/catalog/catalog-image-4.jpg" alt="" width="300" height="212">
-            <div class="hotel-card__info hotel-info">
-              <p>
+            <div class="hotel-card__info">
+              <p class="hotel-info">
                 <span class="hotel-info__type">Гостиница</span>
                 <span class="hotel-info__min-price">От 1500 ₽</span>
               </p>
-              <p>
+              <p class="hotel-card__buttons">
                 <a class="btn hotel-info__more-info-btn" href="#">Подробнее</a>
                 <button class="btn hotel-info__favorite-btn">В избранное</button>
               </p>
-              <div>
-                <ol class="hotel-info__stars hotel-stars">
-                  <li class="hotel-stars__item hotel-stars__item--checked">Одна звезда</li>
-                  <li class="hotel-stars__item hotel-stars__item--checked">Две звезды</li>
-                  <li class="hotel-stars__item">Три звезды</li>
-                  <li class="hotel-stars__item">Четыре звезды</li>
-                  <li class="hotel-stars__item">Пять звезд</li>
-                </ol>
+              <div class="hotel-card__stars">
+                <p class="hotel-stars__item hotel-stars__item--two-star"><span class="visually-hidden">Четыре звезды</span></p>
                 <span class="hotel-info__rating">Рейтинг: 5,0</span>
               </div>
             </div>
           </li>
         </ul>
+        <hr>
         <ul class="pagination">
           <li class="pagination__item pagination__item--current">
             <a class="pagination__link">1</a>
