@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Валерий Васен](https://up.htmlacademy.ru/htmlcss/39/user/367467).
-* Наставник: `Неизвестно`.
+* Наставник: [Кексобот](https://giter.club/keksobot).
+* Ссылка на сайт: [Сайт](https://vasen.github.io/367467-sedona-39/).
 
 ---
 
